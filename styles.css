@@ -49,6 +49,11 @@ img {
   width: 74%;
 }
 
+.dream {
+    width: 800px;
+    margin: 10%;
+}
+
 .bold {
   color: Tomato;
 }
