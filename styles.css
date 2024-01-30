@@ -78,3 +78,9 @@ img {
 .sequence {
   margin: 15px 70px;
 }
+
+.carbonbadge {
+  margin: -45px auto;
+  display: flex;
+  justify-content: right;
+}
