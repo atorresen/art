@@ -80,14 +80,21 @@ img {
 }
 
 .footer {
+  color: #ddd;
   background-color: black;
-  height: 80px;
+  height: 120px;
   margin: 50px -50px -100px -50px;
 }
 
+.footerlink {
+  color: #ddd;
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin: 5px;
+}
+
 .carbonbadge {
-  margin: auto 50px;
-  padding: 20px 0;
+  margin: 2px 50px;
   display: flex;
   justify-content: left;
 }
