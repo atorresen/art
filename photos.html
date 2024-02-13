@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AnneMarie Torresen -- Photos</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/icon.ico">
+</head>
+
+<body style="background: white">
+
+  <div class="banner">
+    <a href="index.html" style="color: white">ᐊ Back</a> This website is a work in progress :)
+  </div>
+
+  <h2 style="margin-top: 20px">title</h2>
+
+  <div class="photos" id="photos"></div>
+
+  <script>
+    function loadImages() {
+      const xhttp = new XMLHttpRequest();
+
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          const fileList = this.responseText.split('\n'); // Split by lines
+          let currentFolder = '';
+
+          const filePaths = fileList
+            .map(f => { // Build correct path for each file
+              let filePath = '';
+
+              if (f) {
+                if (f[0] === '.') {
+                  currentFolder = f.replace('.', '').replace(':', '/');
+                } else if (f[f.length - 1] !== '/') {
+                  filePath = `${location.href}${currentFolder}${f}`;
+                }
+              }
+
+              return filePath;
+            })
+            .filter(f => f); // Remove empty lines
+
+          const imagesContainer = document.getElementById('photos');
+
+          filePaths.map(f => { // Create and put images to the DOM
+            const img = document.createElement('IMG');
+            img.src = f;
+            imagesContainer.appendChild(img);
+          });
+        }
+      };
+
+      xhttp.open("GET", "photos.txt", true);
+      xhttp.send();
+    }
+
+    loadImages();
+  </script>
+
+</body>
+
+</html>
