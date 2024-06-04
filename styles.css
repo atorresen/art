@@ -41,7 +41,7 @@ hr {
   background: linear-gradient(to right, transparent 50%, #fefefe 50%), linear-gradient(to right, #000, #fefefe);
   background-size: 1.5rem, 100%;
   transform: rotate(-0.33deg);
-  transform-origin: 50% 0%;
+  transform-origin: 50% 0;
 }
 
 img {
