@@ -63,6 +63,15 @@ img {
   color: tomato;
 }
 
+
+audio {
+  height: 50px;
+}
+
+.audio-player {
+  height: 100px;
+}
+
 .banner {
   color: white;
   background-color: black;
