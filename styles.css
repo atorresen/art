@@ -50,19 +50,22 @@ img {
   margin: 0 auto;
 }
 
+td {
+  vertical-align: top;
+}
+
 .otherEntries {
   width: 74%;
 }
 
-.dream {
-    width: 800px;
-    margin: 10%;
+.img {
+    max-width: 800px;
+    margin: 10px;
 }
 
 .bold {
   color: tomato;
 }
-
 
 audio {
   height: 50px;
