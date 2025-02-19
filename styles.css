@@ -52,7 +52,7 @@ p {
 hr {
   position: relative;
   display: block;
-  margin: 60px -60px;
+  margin: 50px -60px;
   height: 2px;
   border: none;
   background: linear-gradient(to right, transparent 50%, var(--bg) 50%), linear-gradient(to right, gold, var(--bg));
