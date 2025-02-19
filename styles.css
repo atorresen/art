@@ -94,6 +94,7 @@ audio {
 .banner {
   color: white;
   background-color: black;
+  font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
