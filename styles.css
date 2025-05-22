@@ -96,11 +96,12 @@ audio {
   background-color: black;
   font-size: 0.8rem;
   font-weight: bold;
-  text-align: center;
+  /* text-align: center; */
   vertical-align: middle;
   height: 50px;
   line-height: 50px;
   margin: auto -50px;
+	padding: 0 20px;
 }
 
 .collapsed {
@@ -127,6 +128,7 @@ audio {
   font-size: 0.85rem;
   font-weight: normal;
   margin: 5px;
+	text-decoration: none;
 }
 
 .carbonbadge {
