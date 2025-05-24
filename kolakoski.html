@@ -2,90 +2,90 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
-  <title>AnneMarie Torresen -- Kolakoski walks</title>
+	<meta charset="utf-8">
+	<title>AnneMarie Torresen -- Kolakoski walks</title>
 
-  <!-- bootstrap -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="images/icon.ico">
+	<link rel="stylesheet" href="styles.css">
+	<link rel="icon" href="images/icon.ico">
 </head>
 
 <body style="background: white">
 
-  <div class="banner"><a href="index.html" style="color: white">ᐊ Back</a></div>
+	<div class="banner"><a href="index.html" style="color: white">ᐊ Back</a></div>
 
-  <h2 style="margin-top: 20px">Kolakoski walks</h2>
+	<h2 style="margin-top: 20px">Kolakoski walks</h2>
 
-  <img src="images/kolakoski_walks_gif.gif" alt="kolakoski_walks_gif">
+	<img src="images/kolakoski_walks_gif.gif" alt="kolakoski_walks_gif">
 
-  <div class="accordion-toggle collapsed" data-toggle="collapse" href="#explanation">
-    <h3 id="explain" onclick="toggleArrow('explain')">Explanation (if you want it) ▽</h3>
-  </div>
-  <div class="row collapse in p-3" id="explanation">
+	<div class="accordion-toggle collapsed" data-toggle="collapse" href="#explanation">
+		<h3 id="explain" onclick="toggleArrow('explain')">Explanation (if you want it) ▽</h3>
+	</div>
+	<div class="row collapse in p-3" id="explanation">
 
-    <h4>The Kolakoski sequence</h4>
+		<h4>The Kolakoski sequence</h4>
 
-    <p>The Kolakoski sequence is a list of 1's and 2's. Each number can appear alone in a block of one,
-      or next to another copy of the same number in a block of two.
-      For example, a block of one 1 is "1" and a block of two 1's is "11".</p>
+		<p>The Kolakoski sequence is a list of 1's and 2's. Each number can appear alone in a block of one,
+			or next to another copy of the same number in a block of two.
+			For example, a block of one 1 is "1" and a block of two 1's is "11".</p>
 
-    <p><em>The Kolakoski sequence is constructed so that the numbers in the sequence
-        describe the lengths of the blocks in the sequence.</em></p>
+		<p><em>The Kolakoski sequence is constructed so that the numbers in the sequence
+				describe the lengths of the blocks in the sequence.</em></p>
 
-    <p>The sequence begins as follows:</p>
+		<p>The sequence begins as follows:</p>
 
-    <h5 class="sequence">1 2 2 1 1 2 1 ...</h5>
+		<h5 class="sequence">1 2 2 1 1 2 1 ...</h5>
 
-    <p>These first seven numbers can be described as a block of <em>one</em> 1,
-      followed by a block of <em>two</em> 2's,
-      followed by a block of <em>two</em> 1's,
-      followed by a block of <em>one</em> 2,
-      followed by a block of <em>one</em> 1:
-    </p>
+		<p>These first seven numbers can be described as a block of <em>one</em> 1,
+			followed by a block of <em>two</em> 2's,
+			followed by a block of <em>two</em> 1's,
+			followed by a block of <em>one</em> 2,
+			followed by a block of <em>one</em> 1:
+		</p>
 
-    <h5 class="sequence">1 22 11 2 1 ...</h5>
+		<h5 class="sequence">1 22 11 2 1 ...</h5>
 
-    <p>The lengths of each of those blocks, in order, are: one, two, two, one, one, or:</p>
+		<p>The lengths of each of those blocks, in order, are: one, two, two, one, one, or:</p>
 
-    <h5 class="sequence">1 2 2 1 1 ...</h5>
+		<h5 class="sequence">1 2 2 1 1 ...</h5>
 
-    <p>which you may recognize as the start of the Kolakoski sequence.</p>
+		<p>which you may recognize as the start of the Kolakoski sequence.</p>
 
-    <h5 class="sequence">The sequence creates itself by describing itself.</h5>
+		<h5 class="sequence">The sequence creates itself by describing itself.</h5>
 
-    <p>
-      At the beginning of the pandemic, I started going on “random Kolakoski walks.” I walked 1 or 2 blocks
-      according to the Kolakoski sequence, then turned randomly and repeated. The images above show possible
-      random Kolakoski walk routes on a grid.
-    </p>
+		<p>
+			At the beginning of the pandemic, I started going on “random Kolakoski walks.” I walked 1 or 2 blocks
+			according to the Kolakoski sequence, then turned randomly and repeated. The images above show possible
+			random Kolakoski walk routes on a grid.
+		</p>
 
-  </div>
+	</div>
 
-  <div class="accordion-toggle collapsed" data-toggle="collapse" href="#colorSchemes">
-    <h3 id="more" onclick="toggleArrow('more')">Other visualizations ▽</h3>
-  </div>
-  <div class="row collapse in p-3" id="colorSchemes">
-    <img class="otherEntries" src="images/kolakoski_ArrayPlots.png" alt="kolakoski_ArrayPlots">
-    <p>These are array plots of iterations of the Kolakoski sequence whose numbers of terms are perfect squares,
-      which lend themselves well to square-shaped visualizations. The variations in pattern and randomness
-      become evident as more terms are displayed from top left to bottom right.
-      <a href="https://www.wolframcloud.com/obj/atorresen/Published/KolakoskiVisualizations.nb" target="_blank" rel="noopener noreferrer">Click here to see the code</a>
-    </p>
-    <br>
-    <img class="otherEntries" style="max-width: 500px" src="images/kolakoski_accumulate.png" alt="kolakoski_accumulate">
-    <br>
-    <img class="otherEntries" style="max-width: 500px" src="images/kolakoski_bezier.png" alt="kolakoski_bezier">
-    <br>
-    <img class="otherEntries" src="images/kolakoski_burst.png" alt="kolakoski_burst">
-  </div>
+	<div class="accordion-toggle collapsed" data-toggle="collapse" href="#colorSchemes">
+		<h3 id="more" onclick="toggleArrow('more')">Other visualizations ▽</h3>
+	</div>
+	<div class="row collapse in p-3" id="colorSchemes">
+		<img class="otherEntries" src="images/kolakoski_ArrayPlots.png" alt="kolakoski_ArrayPlots">
+		<p>These are array plots of iterations of the Kolakoski sequence whose numbers of terms are perfect squares,
+			which lend themselves well to square-shaped visualizations. The variations in pattern and randomness
+			become evident as more terms are displayed from top left to bottom right.
+			<a href="https://www.wolframcloud.com/obj/atorresen/Published/KolakoskiVisualizations.nb" target="_blank" rel="noopener noreferrer">Click here to see the code</a>
+		</p>
+		<br>
+		<img class="otherEntries" style="max-width: 500px" src="images/kolakoski_accumulate.png" alt="kolakoski_accumulate">
+		<br>
+		<img class="otherEntries" style="max-width: 500px" src="images/kolakoski_bezier.png" alt="kolakoski_bezier">
+		<br>
+		<img class="otherEntries" src="images/kolakoski_burst.png" alt="kolakoski_burst">
+	</div>
 
-  <script src="collapse.js" type="text/javascript"></script>
+	<script src="collapse.js" type="text/javascript"></script>
 
 </body>
 
