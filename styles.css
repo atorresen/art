@@ -96,7 +96,6 @@ audio {
   background-color: black;
   font-size: 0.8rem;
   font-weight: bold;
-  /* text-align: center; */
   vertical-align: middle;
   height: 50px;
   line-height: 50px;
@@ -114,6 +113,19 @@ audio {
 
 .sequence {
   margin: 0 70px 40px 70px;
+}
+
+.numeralimg {
+	height: 100px;
+	width: auto;
+	float: left;
+	margin: 0;
+}
+
+figure figcaption {
+	margin: 20px;
+	display: inline-block;
+	color: #ddd;
 }
 
 .footer {
