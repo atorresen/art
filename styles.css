@@ -22,6 +22,7 @@ h2 {
 h3, p {
 	color: gray;
 	font-size: 1rem;
+	max-width: 80%;
 }
 
 em {
@@ -92,7 +93,7 @@ audio {
 }
 
 .banner {
-	color: white;
+	color: white !important;
 	background-color: black;
 	font-size: 0.8rem;
 	font-weight: bold;
@@ -102,6 +103,8 @@ audio {
 	margin: auto -50px;
 	padding: 0 20px;
 }
+
+.banner a {color: white;}
 
 .collapsed {
 	cursor: pointer;
