@@ -93,7 +93,7 @@ audio {
 }
 
 .banner {
-	color: white !important;
+	color: white;
 	background-color: black;
 	font-size: 0.8rem;
 	font-weight: bold;
@@ -102,9 +102,10 @@ audio {
 	line-height: 50px;
 	margin: auto -50px;
 	padding: 0 20px;
+	text-align: right;
 }
 
-.banner a {color: white;}
+.banner a {color: #eee;}
 
 .collapsed {
 	cursor: pointer;
