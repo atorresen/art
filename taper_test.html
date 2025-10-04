@@ -45,9 +45,9 @@ revealing some sort of underlying atomic structure of a poem.
 		<a href="about.html#torresen">AnneMarie Torresen</a>
 	</h1>
 </header>
-<meta name="viewport" content="width=device-width">
+<!-- <meta name="viewport" content="width=device-width"> -->
 <style>td{text-align:center}@media(width<=700px){td{display:block}}</style>
-<table style="margin:15px"><tr><td>
+<table style="margin:15px"><tr><td style="border:solid 2px">
 <textarea id="i" rows="15" cols="30" oninput="f()">
 see the shape built by
 the crossing paths of letters
@@ -56,8 +56,8 @@ typed in a poem</textarea><br>
 <button onclick="b('c')" id="c">circle</button>
 <button onclick="b('q')" id="q">qwerty</button>
 <button onclick="b('m')" id="m">mod 15</button><br><br>
-<h6>letters <input onclick="h()" type="checkbox"></h6>
-<td><canvas id="v" width="490" height="400"></canvas></td>
+<h6 style="font-family:sans-serif">letters <input onclick="h()" type="checkbox"></h6>
+<td style="border:solid 2px"><canvas id="v" width="490" height="400"></canvas></td>
 </tr></table>
 <script>
 e=(i)=>{return document.getElementById(i)}
