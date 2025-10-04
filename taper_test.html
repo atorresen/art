@@ -20,8 +20,8 @@ which is made of words, which is made of letters. How can we consider
 a poem at this smallest level? This webpage creates visualizations of
 the interactions between the letters of a text as they cross between ends
 of the alphabet (or the keyboard). It offers four methods for seeing
-how letters combine, not by forming words to which we assign meanings,
-but rather revealing some sort of underlying atomic structure of a poem.
+how letters combine, focusing not on the meanings of words but rather
+revealing some sort of underlying atomic structure of a poem.
 
 -->
 
@@ -45,35 +45,57 @@ but rather revealing some sort of underlying atomic structure of a poem.
 		<a href="about.html#torresen">AnneMarie Torresen</a>
 	</h1>
 </header>
-<table style="margin:15px"><tr><td><textarea id="i"rows="15"cols="30"oninput="f()">see the shape built by
+<meta name="viewport" content="width=device-width">
+<style>td{text-align:center}@media(width<=700px){td{display:block}}</style>
+<table style="margin:15px"><tr><td>
+<textarea id="i" rows="15" cols="30" oninput="f()">
+see the shape built by
 the crossing paths of letters
 typed in a poem</textarea><br>
-<button onclick="b('a')"id="a"style="font-weight:bold">array</button>
-<button onclick="b('c')"id="c">circle</button>
-<button onclick="b('q')"id="q">qwerty</button>
-<button onclick="b('m')"id="m">mod 15</button><br><br>
-<button onclick="h()"style="color:#999">show/hide</button></td>
-<td><canvas id="v"width="550"height="550"></canvas></td></tr></table>
+<button onclick="b('a')" id="a">array</button>
+<button onclick="b('c')" id="c">circle</button>
+<button onclick="b('q')" id="q">qwerty</button>
+<button onclick="b('m')" id="m">mod 15</button><br><br>
+<h6>letters <input onclick="h()" type="checkbox"></h6>
+<td><canvas id="v" width="490" height="400"></canvas></td>
+</tr></table>
 <script>
 e=(i)=>{return document.getElementById(i)}
 v=e("v").getContext("2d")
 z=" abcdefghijklmnopqrstuvwxyz.?*".split("")
-a=[[0,5],[1,5],[2,5],[3,5],[4,5],[0,4],[1,4],[2,4],[3,4],[4,4],[0,3],[1,3],[2,3],[3,3],[4,3],[0,2],[1,2],[2,2],[3,2],[4,2],[0,1],[1,1],[2,1],[3,1],[4,1],[0,0],[1,0],[2,0],[3,0],[240,80]]
-c=[[100,0],[98,20],[92,39],[82,56],[70,72],[50,84],[30,96],[7,100],[-13,99],[-32,95],[-50,86],[-67,75],[-80,60],[-90,43],[-97,24],[-100,4],[-97,-20],[-90,-44],[-79,-61],[-65,-76],[-49,-87],[-31,-95],[-11,-99],[9,-100],[28,-96],[47,-88],[63,-77],[83,-55],[92,-37],[347,226]]
-q=[[5,0],[1.2,2],[5.5,1],[3.5,1],[3.2,2],[3,3],[4.2,2],[5.2,2],[6.2,2],[8,3],[7.2,2],[8.2,2],[9.2,2],[7.5,1],[6.5,1],[9,3],[10,3],[1,3],[4,3],[2.2,2],[5,3],[7,3],[4.5,1],[2,3],[2.5,1],[6,3],[1.5,1],[9,1],[10,1],[30,310]]
-m=[];for(l of z){i=z.indexOf(l);m.push([15*i+30,-10*(i%15)+300])}
-g=(l)=>{o={};for(n in z){o[z[n]]=t[n]};r=o[l]
-if(r===undefined){r=o["*"]}else if(t==a){r=[60*r[0]+90,-60*r[1]+400]}else if(t==c){r=[1.5*r[0]+220,-1.5*r[1]+250]}else if(t==q){r=[50*r[0],-50*r[1]+360]};return r}
-t=a;b=(x)=>{t=({"a":a,"c":c,"q":q,"m":m})[x]
-for(i of["a","c","q","m"]){e(i).style="font-weight:normal"}
-e(x).style="font-weight:bold";f()}
-d=false;h=()=>{d=(!d);f()}
-f=()=>{s=e("i").value.toLowerCase().split("")
-v.beginPath();v.fillStyle="#fff";v.fillRect(0,0,550,550)
-v.fillStyle="#999";if(d){for(l of z){v.fillText(l,g(l)[0],g(l)[1])}}
-p=s.map(g)
-v.moveTo(p[0][0],p[0][1]);for(x of p){v.lineTo(x[0],x[1])};v.stroke()}
-f()
+a=[[0,5],[1,5],[2,5],[3,5],[4,5],[0,4],[1,4],[2,4],[3,4],[4,4],[0,3],[1,3],[2,3],[3,3],[4,3],[0,2],[1,2],[2,2],[3,2],[4,2],[0,1],[1,1],[2,1],[3,1],[4,1],[0,0],[1,0],[2,0],[3,0],[365,300]]
+c=[[10,0],[9.5,2],[9,4],[8,6.1],[7,7],[5,8.5],[3,9.5],[1,10],[-1.3,10],[-3,9.5],[-5,8.7],[-7,7],[-8,6],[-9,4],[-9.5,2],[-10,0],[-9.5,-2],[-9,-4],[-8,-6],[-6.5,-7],[-5,-8],[-3,-9.5],[-1,-9.8],[1,-10],[3,-9.6],[4.5,-9],[6,-7.5],[8,-5],[9,-4],[400,190]]
+q=[[5,0],[1,2],[5,1],[3,1],[3,2],[3,3],[4,2],[5,2],[6,2],[8,3],[7,2],[8,2],[9,2],[7,1],[6,1],[9,3],[10,3],[1,3],[4,3],[2,2],[5,3],[7,3],[4,1],[2,3],[2,1],[6,3],[1,1],[9,1],[10,1],[40,200]]
+m=[];for(l of z){i=z.indexOf(l);m.push([15*i+30,-10*(i%15)+225])}
+g=(l)=>{
+	o={};for(n in z){o[z[n]]=t[n]};r=o[l]
+	if(r===undefined){return o["*"]}else{
+		return ({
+			"a":[60*(r[0]+2),-50*(r[1]-6)],
+			"c":[15*r[0]+250,-15*r[1]+175],
+			"q":[45*(r[0]+.7-r[1]/4),-50*(r[1]-5)],
+			"m":r})[y]
+	}
+}
+b=(x)=>{
+	y=x;t=({"a":a,"c":c,"q":q,"m":m})[x];f()
+	for(i of["a","c","q","m"]){
+		e(i).style.fontWeight=""
+	};
+	e(x).style.fontWeight="900"
+}
+d=false;
+h=()=>{d=!d; f()}
+f=()=>{
+	p=e("i").value.toLowerCase().split("").map(g);
+	v.beginPath();
+	v.fillStyle="#fff";v.fillRect(0,0,500,500);
+	v.fillStyle="#999";if(d){
+		for(l of z) {i=g(l);v.fillText(l,i[0],i[1])}
+	};
+	v.moveTo(p[0][0],p[0][1]);for(x of p){v.lineTo(x[0],x[1])};v.stroke()
+}
+b("a")
 </script>
 </body>
 </html>
