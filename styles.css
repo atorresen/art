@@ -80,6 +80,11 @@ td {
 		margin: 10px;
 }
 
+.smimg {
+		max-width: 400px;
+		margin: 10px;
+}
+
 .bold {
 	color: var(--hi);
 }
