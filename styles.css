@@ -41,6 +41,10 @@ a, .ptitle {
 	font-weight: bold;
 }
 
+.lesserlink {
+	font-weight: normal;
+}
+
 .subtlea {
 	color: gray;
 	font-weight: normal;
