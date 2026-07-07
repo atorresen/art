@@ -4,7 +4,7 @@ document.body.insertBefore(header, document.body.firstChild);
 
 let loc = window.location.href.split("/").at(-1);
 
-if (loc == "index.html" || loc == "index.html#about") {
+if (loc == "" || loc == "art" || loc == "index.html" || loc == "index.html#about") {
     // homepage
     let donate = document.createElement("a");
     donate.href = "https://www.unicefusa.org/how-help/donate";
