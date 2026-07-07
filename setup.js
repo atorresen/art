@@ -8,8 +8,8 @@ if (loc == "" || loc == "art" || loc == "index.html" || loc == "index.html#about
     // homepage
     let donate = document.createElement("a");
     donate.href = "https://www.unicefusa.org/how-help/donate";
-    donate.innerText = "Donate to UNICEF 🕊️";
-    donate.style.color = "yellowgreen";
+    donate.innerText = "🕊️";
+    donate.style = "text-decoration: none;"
     header.appendChild(donate);
 } else {
     // other pages
@@ -22,27 +22,5 @@ if (loc == "" || loc == "art" || loc == "index.html" || loc == "index.html#about
 
 // footer
 let footer = document.createElement("footer");
-let footerLinks = document.createElement("p");
-let footerLinkStyle = "margin: 8px; text-decoration: underline; color: hotpink";
-
-footerLinks.innerText = "Some images:";
-let tumblrLink = document.createElement("a");
-tumblrLink.href = "https://atorresen.tumblr.com/";
-tumblrLink.innerText = "Tumblr";
-tumblrLink.style = footerLinkStyle;
-footerLinks.appendChild(tumblrLink);
-
-let githubText = document.createTextNode("    Some code:");
-footerLinks.appendChild(githubText);
-let githubLink = document.createElement("a");
-githubLink.href = "https://github.com/atorresen";
-githubLink.innerText = "GitHub";
-githubLink.style = footerLinkStyle;
-footerLinks.appendChild(githubLink);
-
-footer.appendChild(footerLinks);
+footer.innerHTML = "<p>Some images: <a href='https://atorresen.tumblr.com/' class='footerLink'>Tumblr</a>  <wbr>Some code: <a href='https://github.com/atorresen' class='footerLink'>GitHub</a></p>";
 document.body.appendChild(footer);
-
-//TODO: add carbon badge
-//<div id="wcb" class="carbonbadge"></div>
-//<script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>

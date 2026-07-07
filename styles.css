@@ -19,7 +19,6 @@ body {
 }
 
 div {
-    min-height: 200px;
     max-width: 800px;
     margin: 16px;
 }
@@ -107,4 +106,10 @@ header, footer {
 
 footer {
     bottom: 0;
+}
+
+.footerLink {
+    margin: 8px;
+    text-decoration: underline;
+    color: hotpink;
 }
