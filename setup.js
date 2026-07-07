@@ -22,5 +22,5 @@ if (loc == "" || loc == "art" || loc == "index.html" || loc == "index.html#about
 
 // footer
 let footer = document.createElement("footer");
-footer.innerHTML = "<p>Some images: <a href='https://atorresen.tumblr.com/' class='footerLink'>Tumblr</a>  <wbr>Some code: <a href='https://github.com/atorresen' class='footerLink'>GitHub</a></p>";
+footer.innerHTML = "<p>Some images: <a href='https://atorresen.tumblr.com/' class='footerLink'>Tumblr</a><br>Some code: <a href='https://github.com/atorresen' class='footerLink'>GitHub</a></p>";
 document.body.appendChild(footer);
