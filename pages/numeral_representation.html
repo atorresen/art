@@ -15,35 +15,27 @@
             representations of integers in Aegean, Aztec, Babylonian, Cistercian, Egyptian, Greek, 
             Kaktovik, Mayan, Roman, or Suzhou numeral systems.
         </p>
-        <table id="numeralsTable"></table>
-
-        <br>
 
         <p><em><a href="https://resources.wolframcloud.com/FunctionRepository/resources/NumeralRepresentation/">Wolfram Function Repository documentation</a></em></p>
+
+        <div id="numerals" style="max-width: 100%;"></div>
     </div>
 
     <script src="../setup.js"></script>
     <script>
         let systems = ["Aegean", "ASCII", "Aztec", "Babylonian", "Cistercian", "Kaktovik", "Egyptian", "Greek", "Mayan", "Suzhou"];
-        let table = document.getElementById("numeralsTable");
+        let div = document.getElementById("numerals");
 
         for (let s of systems) {
-            let row = document.createElement("tr");
-            
-            let sysTd = document.createElement("td");
-            sysTd.innerText = s;
-            sysTd.style = "text-align: right; color: gray;"
-            row.appendChild(sysTd);
-
+            let numdiv = document.createElement("div");
+            numdiv.style = "display: flex; align-items: center;"
+            numdiv.innerText = s;
             let img = document.createElement("img");
             img.src = "../images/numeral_representation/" + s.toLowerCase() + ".png";
             img.classList.add("smImg");
             img.alt = "The" + s + "numeral for 643";
-            let imgTd = document.createElement("td");
-            imgTd.appendChild(img);
-            row.appendChild(imgTd);
-            
-            table.appendChild(row);
+            numdiv.appendChild(img);
+            div.appendChild(numdiv);
         }
     </script>
 

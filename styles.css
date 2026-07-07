@@ -45,6 +45,7 @@ img {
 
 .smImg {
     max-height: 120px;
+    max-width: 80%;
     width: auto;
     height: auto;
     padding: 24px;
