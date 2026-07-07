@@ -51,8 +51,8 @@ img {
 }
 
 .trashImg {
-    width: 28%;
-    margin: 0 8px;
+    max-width: 350px;
+    margin: 8px;
 }
 
 a {

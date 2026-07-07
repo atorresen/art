@@ -25,27 +25,24 @@
         let num = 7;
 
         for (let i = 1; i <= num; i++) {
-            let row = document.createElement("div");
 
             let scan = document.createElement("img");
             scan.classList.add("trashscan");
             scan.src = "../images/trashscans/" + i + "_scan.png";
             scan.classList.add("trashImg");
-            row.appendChild(scan);
+            can.appendChild(scan);
 
             let fill = document.createElement("img");
             fill.classList.add("trashfill");
             fill.src = "../images/trashscans/" + i + "_fill.png";
             fill.classList.add("trashImg");
-            row.appendChild(fill);
+            can.appendChild(fill);
 
             let plot = document.createElement("img");
             plot.classList.add("trashplot");
             plot.src = "../images/trashscans/" + i + "_plot.png";
             plot.classList.add("trashImg");
-            row.appendChild(plot);
-
-            can.appendChild(row);
+            can.appendChild(plot);
         }
     </script>
 
