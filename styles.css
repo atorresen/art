@@ -51,6 +51,11 @@ img {
     padding: 24px;
 }
 
+.trashImg {
+    width: 28%;
+    margin: 0 8px;
+}
+
 a {
     color: inherit;
 }

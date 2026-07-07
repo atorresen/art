@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" href="../styles.css">
+    <title>trashscans</title>
+</head>
+<body>
+    
+    <div>
+        <p>
+            <h1 style="display: inline">Trashscans</h1> <i>(trash, scan, penplot)</i> transform trash
+            through dimensions, from object to surface to line.
+        </p>
+        <br>
+        <div id="trashscans"></div>
+    </div>
+
+    <script src="../setup.js"></script>
+
+    <script>
+        let can = document.getElementById("trashscans");
+        let num = 7;
+
+        for (let i = 1; i <= num; i++) {
+            let row = document.createElement("div");
+
+            let scan = document.createElement("img");
+            scan.classList.add("trashscan");
+            scan.src = "../images/trashscans/" + i + "_scan.png";
+            scan.classList.add("trashImg");
+            row.appendChild(scan);
+
+            let fill = document.createElement("img");
+            fill.classList.add("trashfill");
+            fill.src = "../images/trashscans/" + i + "_fill.png";
+            fill.classList.add("trashImg");
+            row.appendChild(fill);
+
+            let plot = document.createElement("img");
+            plot.classList.add("trashplot");
+            plot.src = "../images/trashscans/" + i + "_plot.png";
+            plot.classList.add("trashImg");
+            row.appendChild(plot);
+
+            can.appendChild(row);
+        }
+    </script>
+
+</body>
+</html>
