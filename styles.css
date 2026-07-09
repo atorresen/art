@@ -61,7 +61,7 @@ a {
 }
 
 p {
-    margin-left: 32px;
+    margin: 16px;
     color: var(--gray);
 }
 
