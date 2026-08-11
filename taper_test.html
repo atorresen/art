@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Prime-ary Color Mixer (Taper #17)</title>
+
+<!-- “Prime-ary Color Mixer” Copyright (C) 2026 AnneMarie Torresen
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright 
+notice and this notice are preserved. This file is offered as-is,
+without any warranty.
+
+This is from Taper #17: Prime, Fall 2026:
+
+https://taperzine.org/17/title_of_your_work.html
+
+Primary colors are fundamental to color theory. Prime numbers
+are fundamental to number theory. This prime-ary color mixing tool 
+blends these two prime-based concepts: multiply prime numbers by 
+mixing primary colors. Perhaps you will reveal some of the many
+beautiful qualities that arise from integers/hues.
+
+-->
+
+<style>
+	body { margin:0 ; overflow:hidden }
+	a { color:#eee ; text-decoration:none }
+	header { margin:0 ; padding:0 ; background-color:#444 ; color:#bbb ;
+		position:relative ; z-index:1000 }
+	header > h1 { margin:0 ; font-size:12px ; font-family:sans-serif ;
+		border-bottom:1px #999 solid ; padding:5px 10px ; line-height:17px }
+</style>
+</head>
+<body>
+<header id="nav">
+	<h1>
+		<a href="prev.html">&lt;&lt;</a> &nbsp; 
+		<a href="index.html">Taper #17 :
+		Prime</a> : Fall 2026 &nbsp; 
+		<a href="next.html">&gt;&gt;</a><br>
+		<a href="prime-ary_color_mixer.html">Prime-ary Color Mixer</a> by
+		<a href="about.html#torresen">AnneMarie Torresen</a>
+	</h1>
+</header>
+
+<!-- All poem code goes here, and must be less than or equal to 2048 bytes (not including closing </body> and </html> tags below)-->
+<style>
+	body {overflow:scroll;}
+	#n,#m {text-align:left;min-height:34px;}
+	button {min-width:34px;min-height:34px;}
+	div {margin:17px auto;max-width:289px;text-align:center;font-family:sans-serif;}
+</style>
+<div id="d">
+	<button onclick="f(2)" style="background-color:#f00">2</button>
+	<button onclick="f(3)" style="background-color:#0f0">3</button>
+	<button onclick="f(5)" style="background-color:#00f;color:#aaa">5</button>
+	<button onclick="f(7)" style="background-color:#ff0">7</button>
+	<button onclick="f(11)" style="background-color:#f0f">11</button>
+	<button onclick="f(13)" style="background-color:#0ff">13</button>
+	<button onclick="f(17)" style="background-color:#000;color:#aaa">17</button>
+	<br><br>
+	<canvas id="c"></canvas>
+	<p id="m"></p>
+	<p id="n"><p>
+	<button onclick="rs()">clear</button>
+	<button onclick="sv()">save</button>
+</div>
+
+<script>
+	let c=document.getElementById("c");
+	let ctx=c.getContext("2d",{willReadFrequently:true});
+	let d=17*17;
+	let n=1;
+	let m=[];
+	let res="";
+	function f(p) {
+		n=n*p;
+		if(p > 1) {
+			m.push(p);
+			document.getElementById("m").innerText=(m.join(" × "));
+			document.getElementById("n").innerText="= "+n;
+		};
+		let r=[255,255,255];
+		switch (p) {
+			case 2:r=[255,0,0];break;
+			case 3:r=[0,255,0];break;
+			case 5:r=[0,0,255];break;
+			case 7:r=[255,255,0];break;
+			case 11:r=[255,0,255];break;
+			case 13:r=[0,255,255];break;
+			case 17:r=[0,0,0];break;
+		};
+		ctx.fillStyle="rgb("+r[0]+" "+r[1]+" "+r[2]+"/"+100/(Math.max(m.length,1))+"%)";
+		ctx.fillRect(0,0,d,d);
+	};
+	function rs() {
+		n=1; m=[];
+		f(1);
+		document.getElementById("m").innerText="";
+		document.getElementById("n").innerText="";
+	};
+	function sv() {
+		let p=document.createElement("p");
+		res=ctx.getImageData(17,17,1,1).data;
+		p.style="background-color:rgb("+res[0]+" "+res[1]+" "+res[2]+")";
+		p.innerText=n;
+		document.getElementById("d").appendChild(p);
+	};
+	rs();
+</script>
+</body>
+</html>
