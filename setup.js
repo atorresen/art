@@ -14,7 +14,7 @@ if (loc == "" || loc == "art" || loc == "index.html" || loc == "index.html#about
 } else {
     // other pages
     let back = document.createElement("a");
-    back.href = "../index.html";
+    back.href = "index.html";
     back.innerText = "< back";
     header.appendChild(back);
 }

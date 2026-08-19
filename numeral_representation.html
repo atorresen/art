@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/icon.ico">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="styles.css">
     <title>numeral representation</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
         <div id="numerals" style="max-width: 100%;"></div>
     </div>
 
-    <script src="../setup.js"></script>
+    <script src="setup.js"></script>
     <script>
         let systems = ["Aegean", "ASCII", "Aztec", "Babylonian", "Cistercian", "Kaktovik", "Egyptian", "Greek", "Mayan", "Suzhou"];
         let div = document.getElementById("numerals");
@@ -31,7 +31,7 @@
             numdiv.style = "display: flex; align-items: center;"
             numdiv.innerText = s;
             let img = document.createElement("img");
-            img.src = "../images/numeral_representation/" + s.toLowerCase() + ".png";
+            img.src = "images/numeral_representation/" + s.toLowerCase() + ".png";
             img.classList.add("smImg");
             img.alt = "The" + s + "numeral for 643";
             numdiv.appendChild(img);

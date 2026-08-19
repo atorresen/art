@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../images/icon.ico">
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="styles.css">
     <title>trashscans</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <div id="trashscans"></div>
     </div>
 
-    <script src="../setup.js"></script>
+    <script src="setup.js"></script>
 
     <script>
         let can = document.getElementById("trashscans");
@@ -28,19 +28,19 @@
 
             let scan = document.createElement("img");
             scan.classList.add("trashscan");
-            scan.src = "../images/trashscans/" + i + "_scan.png";
+            scan.src = "images/trashscans/" + i + "_scan.png";
             scan.classList.add("trashImg");
             can.appendChild(scan);
 
             let fill = document.createElement("img");
             fill.classList.add("trashfill");
-            fill.src = "../images/trashscans/" + i + "_fill.png";
+            fill.src = "images/trashscans/" + i + "_fill.png";
             fill.classList.add("trashImg");
             can.appendChild(fill);
 
             let plot = document.createElement("img");
             plot.classList.add("trashplot");
-            plot.src = "../images/trashscans/" + i + "_plot.png";
+            plot.src = "images/trashscans/" + i + "_plot.png";
             plot.classList.add("trashImg");
             can.appendChild(plot);
         }
