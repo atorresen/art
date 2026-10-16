@@ -50,6 +50,11 @@ img {
     padding: 24px;
 }
 
+.dreamImg {
+    max-width: 550px;
+    margin-bottom: 16px
+}
+
 .trashImg {
     width: 100%;
     max-width: 350px;
