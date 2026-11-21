@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kolakoski walks</title>
+</head>
+<body>
+    
+    <div>  
+        <p>
+            <h1 style="display: inline">Kolakoski walks</h1> <i>(walks, digital)</i> trace the 
+            digits of the <a href="https://oeis.org/A000002">Kolakoski sequence</a> as turns in a lattice of city blocks; <a href="https://atorresen.github.io/walk">click here for an animation</a>
+        </p>
+
+        <img src="images/kolakoski_walks.gif">
+        
+        <p>The Kolakoski sequence is a list of 1's and 2's. Each number can appear alone in a block of one,
+			or next to another copy of the same number in a block of two.
+			For example, a block of one 1 is "1" and a block of two 1's is "11".
+			<br>
+		</p>
+
+		<p><em>The Kolakoski sequence is constructed so that the numbers in the sequence
+				describe the lengths of the blocks in the sequence.</em></p>
+
+		<p>The Kolakoski sequence begins as follows:</p>
+
+		<h5 class="sequence">1 2 2 1 1 2 1 ...</h5>
+
+		<p>These first seven numbers can be described as a block of <em>one</em> 1,
+			followed by a block of <em>two</em> 2's,
+			followed by a block of <em>two</em> 1's,
+			followed by a block of <em>one</em> 2,
+			followed by a block of <em>one</em> 1:
+		</p>
+
+		<h5 class="sequence">1 22 11 2 1 ...</h5>
+
+		<p>The lengths of each of those blocks, in order, are: one, two, two, one, one, or:</p>
+
+		<h5 class="sequence">1 2 2 1 1 ...</h5>
+
+		<p>which you may recognize as the beginning of the Kolakoski sequence.</p>
+
+		<h5 class="sequence">The sequence defines itself by describing itself.</h5>
+
+		<p>
+			To take a "random Kolakoski walk," I walk 1 or 2 city blocks according to the Kolakoski 
+			sequence, then turn randomly and repeat. The images above show possible random 
+			Kolakoski walk routes on a grid.
+		</p> 
+    </div>
+
+    <script src="setup.js"></script>
+
+</body>
+</html>

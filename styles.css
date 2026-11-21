@@ -8,6 +8,7 @@
   --header: #000;
   --headercolor: hotpink;
   --hr: cornflowerblue;
+  --small: teal;
 }
 
 body {
@@ -78,7 +79,7 @@ em {
 i {
     font-size: 0.75rem;
     font-style: normal;
-    color: teal;
+    color: var(--small);
 }
 
 ul {
